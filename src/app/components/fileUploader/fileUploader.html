@@ -1,0 +1,52 @@
+<div class="uploader-panel">
+    <form name="fileForm">
+        <div class="input-block" layout="row">
+            <md-button flex="30" ng-click="clickSelectFileButton($event)" ng-disabled="fileIsUploading">
+                <md-icon class="upload-icon">
+                    <i class="material-icons">note_add</i>
+                </md-icon>
+                Select File
+            </md-button>
+            <input type="file" name="selectedFile" ng-model="uploadObject.file" ngf-select>
+            <span class="SelectedfileName md-body-1" flex="70" ng-bind="uploadObject.file.name"
+                  msd-wheel="horizontalScroll($event, $delta, $deltaX, $deltaY)"></span>
+        </div>
+        <md-input-container class="md-block">
+            <label>Description</label>
+            <textarea name="comment" ng-model="uploadObject.comment" md-maxlength="50" rows="2" md-select-on-focus></textarea>
+        </md-input-container>
+        <div layout="row" layout-align="end center">
+            <div class="uploader-messages" layout="row" layout-align="center center" flex="auto">
+                <span class="error-message" ng-show="statusCode == 0">This file already in list!</span>
+                <span class="error-message" ng-show="statusCode == 1">Select the file!</span>
+                <span class="success-message" ng-show="statusCode == 2">File uploaded successfully!</span>
+            </div>
+            <md-progress-circular md-mode="determinate" class="upload-rogress hidden-element" value="{{progressPercentage}}"></md-progress-circular>
+            <md-button ng-click="uploadFile($event)" ng-disabled="!fileForm.$valid">
+                <md-icon class="upload-icon">
+                    <i class="material-icons">file_upload</i>
+                </md-icon>
+                Upload
+            </md-button>
+        </div>
+    </form>
+    <md-divider ng-if="!$last"></md-divider>
+
+    <div class="files-list">
+        <div ng-repeat="object in uploadedObjects">
+            <div class="fileRow md-subhead" layout="row">
+                <span class="fileName md-body-1" flex="auto" ng-bind="object.name"
+                      msd-wheel="horizontalScroll($event, $delta, $deltaX, $deltaY)"></span>
+                <span class="fileComment md-body-1" ng-bind="object.comment"
+                      msd-wheel="horizontalScroll($event, $delta, $deltaX, $deltaY)"></span>
+                <span class="fileDate md-body-1" ng-bind="object.date | date : 'dd.MM.yyyy'"></span>
+                <md-button layout-align="center center" ng-click="removeFile($event)" value="{{object.name}}">
+                    <md-icon class="delete-icon">
+                        <i class="material-icons">clear</i>
+                    </md-icon>
+                </md-button>
+            </div>
+            <md-divider ng-if="!$last"></md-divider>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+.uploader-panel{
+    width: 600px;
+    font-size: 20px;
+}
+
+.input-block > input[type="file"]{
+    display: none;
+}
+
+.input-block > .md-button{
+    margin: 0;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.fileRow{
+    height: 20px;
+    margin: 6px 0;
+}
+
+.fileRow > .md-button{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -8px;
+    min-width: inherit;
+    width: 30px;
+    font-size: 15px;
+}
+
+.fileRow > .md-button > span{
+    font-size: 15px;
+    height: 30px;
+}
+
+.input-block > .md-button > span {
+    font-size: x-large;
+}
+
+.md-body-1{
+    padding: 1px;
+    margin: 0 2px ;
+}
+
+.fileName{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SelectedfileName{
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: initial;
+}
+
+.fileComment{
+    width: 200px;
+    border-right: #C2C2C2 solid 1px;
+    border-left: #C2C2C2 solid 1px;
+    padding-left: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fileDate{
+    width: 80px;
+}
+
+.upload-icon{
+    color: #3F51B5;
+    height: 30px;
+    width: 30px;
+}
+
+.delete-icon{
+    color: #845555;
+}
+
+md-divider{
+    margin-top: 6px;
+}
+
+.md-button.icon-left > span, .md-button.icon-left > span{
+    float: right;
+}
+
+.upload-rogress{
+    margin-right: 33px;
+}
+
+.hidden-element{
+    display: none;
+}
+
+.error-message{
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    color: #6a0000;
+}
+
+.success-message{
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    color: #066a05;
+}
