@@ -1,5 +1,5 @@
 (function () {
-    angular.module('app.directives.fileUploader')
+    angular.module('angularUploaderPanel')
         .directive('fileSumbit', function($filter, $timeout, Upload){
             return{
                 restrict: 'E',

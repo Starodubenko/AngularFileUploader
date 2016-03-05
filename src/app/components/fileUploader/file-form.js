@@ -1,5 +1,5 @@
 (function(){
-    angular.module('app.directives.fileUploader')
+    angular.module('angularUploaderPanel')
         .directive('fileForm', function(){
             return{
                 restrict: 'E',

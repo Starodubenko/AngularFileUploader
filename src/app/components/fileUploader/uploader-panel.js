@@ -1,5 +1,5 @@
 (function(){
-    angular.module('app.directives.fileUploader', ['ngAnimate', 'ngMaterial', 'monospaced.mousewheel', 'ngFileUpload'])
+    angular.module('angularUploaderPanel', [])
         .directive('uploaderPanel', function(){
             return{
                 restrict: 'E',

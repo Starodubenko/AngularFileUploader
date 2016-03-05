@@ -1,5 +1,5 @@
 (function(){
-    angular.module('app.directives.fileUploader')
+    angular.module('angularUploaderPanel')
         .filter('fileAlreadyInArray', function () {
             return function (object, uploadedObjects) {
                 var isThere = false;
