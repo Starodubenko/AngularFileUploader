@@ -1,15 +1,13 @@
 To test this directive, you should create and start a small REST server to make http to the server and get response from it.
 
-
+Before start of server, you must to add those libs^
+  https://www.npmjs.com/package/express
+  https://www.npmjs.com/package/multer
 To start js server execute following code in command line of server.js folder:
-
 node server.js
 
-
-After that step, just execute, in command line of gulpfile.js folder, the following code:
-
+After that, just execute, in command line of gulpfile.js folder, the following code:
 gulp serve
-
 
 Server code
 
