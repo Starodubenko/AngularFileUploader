@@ -39,3 +39,8 @@ app.post('/upload-file', upload.fields([
     var currentDate = new Date();
     resp.json({currentDate:currentDate});
 });
+
+app.post('/delete-file', function (req, resp) {
+    resp.status(200).send("file deleted successfully");
+});
+

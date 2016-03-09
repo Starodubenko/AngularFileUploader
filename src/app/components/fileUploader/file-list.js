@@ -32,8 +32,6 @@
                       }, function errorCallback(response) {
                         console.log(response);
                       });
-
-
                     };
                 },
                 link: function ($scope, element, attributes) {
