@@ -1,6 +1,6 @@
 (function () {
     angular.module('angularUploaderPanel')
-        .directive('fileList', function($http){
+        .directive('fileList', function($http, $log){
             return{
                 restrict: 'E',
                 template:
@@ -30,11 +30,11 @@
                           });
                         }
                       }, function errorCallback(response) {
-                        console.log(response);
+                        $log.log(response);
                       });
                     };
                 },
-                link: function ($scope, element, attributes) {
+                link: function ($scope) {
                     $scope.files = [];
 
                     $scope.$on('fileIsUploaded', function (e, data) {

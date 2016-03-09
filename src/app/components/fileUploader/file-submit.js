@@ -1,6 +1,6 @@
 (function () {
     angular.module('angularUploaderPanel')
-        .directive('fileSumbit', function($filter, $timeout, Upload){
+        .directive('fileSumbit', function($filter, $timeout, Upload, $log){
             return{
                 restrict: 'E',
                 require: '^fileForm',
@@ -68,7 +68,7 @@
                                 }, 200);
                             }
                         }, function (resp) {
-                            console.log('Error status: ' + resp.status);
+                          $log.log('Error status: ' + resp.status);
                         }, function (evt) {
                             $scope.progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
                         });
