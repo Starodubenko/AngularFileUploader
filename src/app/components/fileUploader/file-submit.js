@@ -58,6 +58,8 @@
                                     uploadButton.removeClass('hidden-element');
 
                                     FileFormController.setDate(resp.data.currentDate);
+                                    FileFormController.setId(resp.data.id);
+                                    FileFormController.sendFileInToList();
 
                                     $scope.uploadObject = {};
                                     $scope.progressPercentage = 0;

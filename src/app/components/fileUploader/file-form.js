@@ -23,10 +23,19 @@
 
                     vm.setDate = function (date) {
                         $scope.uploadObject.date = date;
+                    };
+
+                    vm.setId = function (id) {
+                      $scope.uploadObject.id = id;
+
+                    };
+
+                    vm.sendFileInToList = function () {
                         $scope.$parent.$broadcast('fileIsUploaded', {
-                            comment: $scope.uploadObject.comment,
-                            name: $scope.uploadObject.file.name,
-                            date: $scope.uploadObject.date
+                          id: $scope.uploadObject.id,
+                          comment: $scope.uploadObject.comment,
+                          name: $scope.uploadObject.file.name,
+                          date: $scope.uploadObject.date
                         })
                     };
 
