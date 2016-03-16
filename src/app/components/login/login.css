@@ -1,0 +1,21 @@
+.login-panel{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.credentials{
+
+}
+
+@keyframes show-slider-animation {
+  from { top: -100vh; }
+  to { top: 0; }
+}
+
+@keyframes hide-slider-animation {
+  from { top: 0; }
+  to { top: -100vh; }
+}

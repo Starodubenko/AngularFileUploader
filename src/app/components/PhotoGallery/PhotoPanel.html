@@ -1,0 +1,122 @@
+<div class="photo-slider show-mode">
+  <div class="slider-background"></div>
+  <div class="slider-buttons" layout="row">
+    <label class="photo-slider-previous" flex="50" ></label>
+    <label class="photo-slider-next" flex="50" ></label>
+  </div>
+  <div class="photo-slider-content" layout="row">
+    <img src="images_3.jpg">
+  </div>
+</div>
+
+<style>
+  .photo-panel{
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+  }
+
+  photo-panel{
+    outline: none;
+  }
+
+  .photo-panel > .photo{
+    position: relative;
+    width: inherit;
+    height: inherit;
+  }
+
+  .photo-view{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0faf8;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .photo-slider{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+
+  .photo-slider > .slider-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  .photo-slider.show-mode{
+    animation: show-slider-animation 0.5s cubic-bezier(0.55, -0.01, 0.11, 0.95);
+    top: 0;
+  }
+
+  .photo-slider.hide-mode{
+    animation: hide-slider-animation 0.5s cubic-bezier(0.55, -0.01, 0.11, 0.95);
+    top: -100vh;
+  }
+
+  @keyframes show-slider-animation {
+    from { top: -100vh; }
+    to { top: 0; }
+  }
+
+  @keyframes hide-slider-animation {
+    from { top: 0; }
+    to { top: -100vh; }
+  }
+
+  .photo-slider > .photo-slider-content{
+    height: inherit;
+    width: inherit;
+  }
+
+  .slider-buttons > .photo-slider-previous:hover{
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  }
+
+  .slider-buttons > .photo-slider-previous:focus{
+    outline:0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .photo-slider > .slider-buttons{
+    position: absolute;
+    height: inherit;
+    width: inherit;
+  }
+
+  .slider-buttons > .photo-slider-next:hover{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  }
+
+  .slider-buttons > .photo-slider-next:focus{
+    outline:0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .current-photo{
+    animation: current-element-animation 0.25s;
+    transform: scale(1.05);
+    box-shadow: 0px 7px 8px -4px rgba(0, 75, 255, 0.4), 0px 12px 17px 2px rgba(0, 67, 255, 0.14), 0px 5px 22px 4px rgba(0, 55, 255, 0.12);
+  }
+
+  @keyframes current-element-animation {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+</style>
